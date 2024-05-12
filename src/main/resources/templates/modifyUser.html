@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify User</title>
+</head>
+<body>
+    <h2>Modify User</h2>
+    <form th:action="@{/userLdap/modifyUser/{uid}(uid=${user.userId})}" method="post">
+        <label>Name: <input type="text" name="name" th:value="${user.name}" placeholder="Name"><br>
+        <label>Email: <input type="text" name="email" th:value="${user.email}" placeholder="Email"><br>
+        <label>Password: <input type="text" name="password" th:value="${user.password}" placeholder="Password"><br>
+        <label>Username: <input type="text" name="username" th:value="${user.username}" placeholder="Username"><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

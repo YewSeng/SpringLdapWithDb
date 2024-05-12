@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add User</title>
+</head>
+<body>
+
+	<form th:action="@{/userLdap/addUser}" th:object="${user}" method="post">
+		<label>Username: <input type="text" th:field="*{username}"></label><br>	
+		<label>Password: <input type="password" th:field="*{password}"></label><br>
+		<label>Name: <input type="text" th:field="*{name}"></label><br>
+		<label>Email: <input type="text" th:field="*{email}"></label><br>
+		<input type="submit" value="Add User"/>
+	</form>
+
+</body>
+</html>
